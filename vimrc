@@ -19,6 +19,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'nvie/vim-flake8'
 
 call vundle#end()
 filetype plugin indent on
@@ -47,6 +49,7 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 nmap <leader>bl :ls<CR>
 
 " Other Settings
+let python_highlight_all=1
 syntax on
 
 " Show line numbers
@@ -62,3 +65,9 @@ set expandtab
 
 " Easier nerd tree
 map <C-n> :NERDTreeToggle<CR>
+
+" Folding settings
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
+let g:SimpylFold_docstring_preview=1
