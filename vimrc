@@ -7,10 +7,6 @@ autocmd! bufwritepost .vimrc source %
 " Rebind <Leader> key
 let mapleader = ","
 
-" easier moving between tabs
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
-
 " Vundle setup
 set nocompatible
 filetype off
@@ -22,11 +18,23 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
 
+"" Airline settup
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+"" Better buffer use
+set hidden
+nmap <leader>T :enew<cr>
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+nmap <leader>bq :bp <BAR> bd #<CR>
+nmap <leader>bl :ls<CR>
 
 " Other Settings
 syntax on
