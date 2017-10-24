@@ -25,10 +25,17 @@ Plugin 'tpope/vim-fugitive'
 if workenv==0
     Plugin 'tmhedberg/SimpylFold'
     Plugin 'nvie/vim-flake8'
+    Plugin 'altercation/vim-colors-solarized'
 endif
 
 call vundle#end()
 filetype plugin indent on
+
+" Setup color scheme
+set t_Co=256
+syntax on
+set background=dark
+colorscheme solarized
 
 "" Airline setup
 if workenv==0
@@ -66,7 +73,6 @@ nmap <leader>bl :ls<CR>
 
 " Other Settings
 let python_highlight_all=1
-syntax on
 
 " Show line numbers
 set number
