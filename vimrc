@@ -68,7 +68,7 @@ nmap <leader>bl :ls<CR>
 " Other Settings
 syntax on
 set background=dark
-color desert
+"color desert
 let python_highlight_all=1
 
 " Show line numbers
