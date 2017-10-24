@@ -22,8 +22,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-fugitive'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'nightsense/seagrey'
 if workenv==0
     Plugin 'tmhedberg/SimpylFold'
     Plugin 'nvie/vim-flake8'
@@ -31,12 +29,6 @@ endif
 
 call vundle#end()
 filetype plugin indent on
-
-" Setup color scheme
-set t_Co=256
-syntax on
-"set background=dark
-"colorscheme seagrey-dark
 
 "" Airline setup
 if workenv==0
@@ -73,6 +65,7 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 nmap <leader>bl :ls<CR>
 
 " Other Settings
+syntax on
 let python_highlight_all=1
 
 " Show line numbers
