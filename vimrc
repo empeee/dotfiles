@@ -7,6 +7,9 @@ autocmd! bufwritepost .vimrc source %
 " Rebind <Leader> key
 let mapleader = ","
 
+" Get terminal type
+let workenv=$WORKENV
+
 " Vundle setup
 set nocompatible
 filetype off
@@ -19,26 +22,39 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'nvie/vim-flake8'
+if workenv==0
+    Plugin 'tmhedberg/SimpylFold'
+    Plugin 'nvie/vim-flake8'
+endif
 
 call vundle#end()
 filetype plugin indent on
 
 "" Airline setup
-let g:airline_powerline_fonts = 1
+if workenv==0
+    let g:airline_powerline_fonts = 1
+endif
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-"" Syntastic setup
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+if workenv==1
+     " Custom symbols since we don't have the right fonts
+     if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+     endif
+            
+     " unicode symbols
+     let g:airline_left_sep = '▶'
+     let g:airline_right_sep = '◀'
+     let g:airline_symbols.crypt = '�'
+     let g:airline_symbols.linenr = '☰'
+     let g:airline_symbols.maxlinenr = '㏑'
+     let g:airline_symbols.branch = '⎇'
+     let g:airline_symbols.paste = 'ρ'
+     let g:airline_symbols.spell = 'Ꞩ'
+     let g:airline_symbols.notexists = '∄'
+     let g:airline_symbols.whitespace = 'Ξ'
+endif
 
 "" Better buffer use
 set hidden
@@ -70,4 +86,6 @@ map <C-n> :NERDTreeToggle<CR>
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
-let g:SimpylFold_docstring_preview=1
+if workenv==0
+    let g:SimpylFold_docstring_preview=1
+endif
