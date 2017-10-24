@@ -42,7 +42,7 @@ if workenv==1
      if !exists('g:airline_symbols')
         let g:airline_symbols = {}
      endif
-            
+
      " unicode symbols
      let g:airline_left_sep = '▶'
      let g:airline_right_sep = '◀'
