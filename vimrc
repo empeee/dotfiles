@@ -22,7 +22,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 if workenv==0
     Plugin 'tmhedberg/SimpylFold'
     Plugin 'nvie/vim-flake8'
@@ -68,7 +68,7 @@ nmap <leader>bl :ls<CR>
 " Other Settings
 syntax on
 set background=dark
-"color desert
+color solarized
 let python_highlight_all=1
 
 " Show line numbers
