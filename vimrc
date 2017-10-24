@@ -23,6 +23,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'nightsense/seagrey'
 if workenv==0
     Plugin 'tmhedberg/SimpylFold'
     Plugin 'nvie/vim-flake8'
@@ -34,8 +35,8 @@ filetype plugin indent on
 " Setup color scheme
 set t_Co=256
 syntax on
-set background=dark
-colorscheme solarized
+"set background=dark
+"colorscheme seagrey-dark
 
 "" Airline setup
 if workenv==0
