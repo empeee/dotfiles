@@ -93,8 +93,7 @@ if workenv==0
     let g:SimpylFold_docstring_preview=1
 endif
 
-" Move backup to tmp directory so you don't get shit files in every directory
-" added undo file too...
+" Move backup to tmp directory so you don't get shit files in every directory added undo file too...
 set backupdir=~/.vim/tmp//
 set directory=~/.vim/tmp//
 set undodir=~/.vim/tmp//
