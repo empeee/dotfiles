@@ -94,5 +94,7 @@ if workenv==0
 endif
 
 " Move backup to tmp directory so you don't get shit files in every directory
-set backupdir=~/.vim/tmp
-set directory=~/.vim/tmp
+" added undo file too...
+set backupdir=~/.vim/tmp//
+set directory=~/.vim/tmp//
+set undodir=~/.vim/tmp//
