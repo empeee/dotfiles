@@ -92,3 +92,7 @@ nnoremap <space> za
 if workenv==0
     let g:SimpylFold_docstring_preview=1
 endif
+
+" Move backup to tmp directory so you don't get shit files in every directory
+set backupdir=~/.vim/tmp
+set directory=~/.vim/tmp
