@@ -4,6 +4,9 @@
 " Automatic reloading of .vimrc on save
 autocmd! bufwritepost .vimrc source %
 
+" Set GUI font to something powerline(airline) compatible
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
+
 " Rebind <Leader> key
 let mapleader = ","
 
