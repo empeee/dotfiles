@@ -1,12 +1,12 @@
 # Setup
 ## General
-At work I use tcsh and can't do things like install fancy fonts. At home I use bash and can do any amount of mucking around.  In order to use the same set of dotfiles for both, set environmental variable `WORKENV=1` for a pared down and/or tcsh setup.
+At work I use tcsh and can't do things like install fancy fonts. At home I use bash and can do any amount of mucking around.  In order to use the same set of dotfiles for both, set environmental variable `WORKENV` for a pared down and/or tcsh setup.
 
 In bash
 ```
 export WORKENV=1
 ```
-In tcsh 
+In tcsh
 ```
 setenv WORKENV 1
 ```
