@@ -37,7 +37,9 @@ call vundle#end()
 filetype plugin indent on
 
 "" Airline setup
-if workenv==0
+" Assume we don't have fancy fonts at work and DEFINITELY don't have fancy
+" fonts in git bash on windows, otherwise assume they're available
+if workenv==0 && !has('win32unix')
     let g:airline_powerline_fonts = 1
 endif
 let g:airline#extensions#tabline#enabled = 1
@@ -73,7 +75,14 @@ nmap <leader>bl :ls<CR>
 " Other Settings
 syntax on
 set background=dark
-color solarized
+" Can't get Windows CMD to have anything but shitty colors, so if we're in
+" git-bash, use desert, otherwise assume we've worked magic to get solarized
+" colors working
+if has('win32unix')
+    color desert
+else
+    color solarized
+endif
 let python_highlight_all=1
 
 " Show line numbers
