@@ -1,4 +1,5 @@
 # Setup
+Notes about how to get to my working setup from scratch.
 ## General
 At work I use tcsh and can't do things like install fancy fonts. At home I use bash and can do any amount of mucking around.  In order to use the same set of dotfiles for both, set environmental variable `WORKENV` for a pared down and/or tcsh setup.
 
