@@ -25,7 +25,12 @@ set autolist
 set color
 set colorcat
 
-setenv PATH ${PATH}:/tools/scripts/queue/bin:/home/mpude/bin
+if ( $?LD_LIBRARY_PATH ) then
+    setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:/tools/sw/python_346/lib;
+else
+    setenv LD_LIBRARY_PATH /tools/sw/python_/346lib;
+endif
+setenv PATH /tools/sw/python_346/bin:${PATH}:/tools/scripts/queue/bin:/home/mpude/bin:/home/mpude/.local/bin/
 setenv PSF_WRITE_CHUNK_MODE_ON true
 setenv TERM screen-256color
 setenv WORKENV 1
