@@ -81,6 +81,8 @@ if has('win32unix')
 else
     color solarized
 endif
+" Shortcut to better default colors for when all else fails
+nmap <leader>m :color desert<CR>
 let python_highlight_all=1
 
 " Show line numbers
