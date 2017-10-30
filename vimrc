@@ -29,7 +29,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tmhedberg/SimpylFold'
-Plugin 'nvie/vim-flake8'
+"Plugin 'nvie/vim-flake8'
 
 call vundle#end()
 filetype plugin indent on
