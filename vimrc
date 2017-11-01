@@ -103,9 +103,7 @@ map <C-n> :NERDTreeToggle<CR>
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
-if workenv==0
-    let g:SimpylFold_docstring_preview=1
-endif
+let g:SimpylFold_docstring_preview=1
 
 " Move backup to tmp directory so you don't get shit files in every directory added undo file too...
 set backupdir=~/.vim/tmp//
