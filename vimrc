@@ -118,3 +118,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
+
+" Highlight settings
+set hlsearch
+noremap <F4> :set hlsearch! hlsearch?<CR>
+nnoremap <CR> :nohlsearch<CR><CR>
