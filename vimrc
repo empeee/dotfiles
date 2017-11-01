@@ -97,7 +97,7 @@ set shiftround
 set expandtab
 
 " Easier nerd tree
-map <C-n> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 
 " Folding settings
 set foldmethod=indent
