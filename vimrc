@@ -25,6 +25,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-fugitive'
@@ -43,7 +44,8 @@ if workenv==0 && !has('win32unix')
 endif
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-
+let g:airline_theme = 'solarized'
+let g:airline_solarized_bg = 'dark'
 if workenv==1
      " Custom symbols since we don't have the right fonts
      if !exists('g:airline_symbols')
@@ -82,6 +84,7 @@ if has('win32unix')
 else
     color solarized
 endif
+
 " Shortcut to better default colors for when all else fails
 nmap <leader>m :color desert<CR>
 let python_highlight_all=1
