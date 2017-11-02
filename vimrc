@@ -98,7 +98,7 @@ set shiftround
 set expandtab
 
 " Easier nerd tree
-map <C-n> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 
 " Folding settings
 set foldmethod=indent
@@ -116,7 +116,7 @@ set undodir=~/.vim/tmp//
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 

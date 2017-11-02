@@ -3,7 +3,7 @@ if (! $?prompt) exit
 
 # Source any files here
 # your aliases file
-if ( -e ~/.alias_csh ) source ~/.aliases
+if ( -e ~/.alias_csh ) source ~/.alias_csh
 
 #xrdb ~/.Xdefaults
 set   black="%{\033[0;30m%}"
