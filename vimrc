@@ -6,7 +6,8 @@ autocmd! bufwritepost .vimrc source %
 
 " Set GUI font to something powerline(airline) compatible when on windows
 if has('win32')
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
+"    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
+    set guifont=Source\ Code\ Pro\ for\ Powerline:h11
 endif
 
 " Rebind <Leader> key
