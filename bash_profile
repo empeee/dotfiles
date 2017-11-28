@@ -16,3 +16,12 @@ shopt -s histappend;
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
+
+# Set ls colors
+if [ -f ~/.dircolors ]; then
+    eval `dircolors -b ~/.dircolors`
+fi
+
+export GIT_EDITOR=vim
+
+export EDITOR=vim
