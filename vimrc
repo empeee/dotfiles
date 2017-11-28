@@ -125,3 +125,6 @@ let g:syntastic_aggregate_errors = 1
 set hlsearch
 noremap <F4> :set hlsearch! hlsearch?<CR>
 nnoremap <CR> :nohlsearch<CR><CR>
+
+" Error Bells
+set noeb vb t_vb=
