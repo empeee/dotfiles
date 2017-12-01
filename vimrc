@@ -30,6 +30,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'lifepillar/vim-solarized8'
+Plugin 'romainl/flattened'
 Plugin 'tmhedberg/SimpylFold'
 "Plugin 'nvie/vim-flake8'
 
@@ -82,11 +84,12 @@ set background=dark
 if has('win32unix')
     color desert
 else
-    color solarized
+    color solarized8
 endif
 
 " Shortcut to better default colors for when all else fails
-nmap <leader>m :color desert<CR>:AirlineTheme dark<CR>
+"nmap <leader>m :color desert<CR>:AirlineTheme dark<CR>
+nmap <leader>m :AirlineTheme dark<CR>
 let python_highlight_all=1
 
 " Show line numbers
