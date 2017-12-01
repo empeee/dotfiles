@@ -84,7 +84,8 @@ set background=dark
 if has('win32unix')
     color desert
 else
-    color solarized8
+"    color solarized8
+    color flattened_dark
 endif
 
 " Shortcut to better default colors for when all else fails
@@ -131,3 +132,6 @@ nnoremap <CR> :nohlsearch<CR><CR>
 
 " Error Bells
 set noeb vb t_vb=
+
+set t_Co=256
+let g:solarized_termcolors=256
