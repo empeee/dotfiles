@@ -88,7 +88,8 @@ color flattened_dark
 
 " Shortcut to better default colors for when all else fails
 "nmap <leader>m :color desert<CR>:AirlineTheme dark<CR>
-nmap <leader>m :color solarized8<CR>:AirlineTheme dark<CR>
+nmap <leader>m :color solarized8<CR>
+":AirlineTheme dark<CR>
 let python_highlight_all=1
 
 " Show line numbers
