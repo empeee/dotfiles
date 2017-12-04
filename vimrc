@@ -4,6 +4,9 @@
 " Automatic reloading of .vimrc on save
 autocmd! bufwritepost .vimrc source %
 
+set t_Co=256
+let g:solarized_termcolors=256
+
 " Set GUI font to something powerline(airline) compatible when on windows
 if has('win32')
 "    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
@@ -130,6 +133,3 @@ nnoremap <CR> :nohlsearch<CR><CR>
 
 " Error Bells
 set noeb vb t_vb=
-
-set t_Co=256
-let g:solarized_termcolors=256
