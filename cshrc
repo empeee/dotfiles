@@ -34,3 +34,5 @@ setenv PATH /tools/sw/python_346/bin:${PATH}:/tools/scripts/queue/bin:/home/mpud
 setenv PSF_WRITE_CHUNK_MODE_ON true
 setenv TERM screen-256color
 setenv WORKENV 1
+
+if (-e ~/.dircolors ) eval `dircolors -c ~/.dircolors`
