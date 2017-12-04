@@ -78,15 +78,10 @@ nmap <leader>bl :ls<CR>
 " Other Settings
 syntax on
 set background=dark
-" Can't get Windows CMD to have anything but shitty colors, so if we're in
-" git-bash, use desert, otherwise assume we've worked magic to get solarized
-" colors working
-if has('win32unix')
-    color desert
-else
-    color solarized8
-"    color flattened_dark
-endif
+
+" solarized8 and flattened_dark seem to work okay-ish in gitbash
+color solarized8
+"color flattened_dark
 
 " Shortcut to better default colors for when all else fails
 "nmap <leader>m :color desert<CR>:AirlineTheme dark<CR>
