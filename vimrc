@@ -84,8 +84,8 @@ set background=dark
 if has('win32unix')
     color desert
 else
-"    color solarized8
-    color flattened_dark
+    color solarized8
+"    color flattened_dark
 endif
 
 " Shortcut to better default colors for when all else fails
