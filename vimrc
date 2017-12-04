@@ -103,6 +103,9 @@ set shiftwidth=4
 set shiftround
 set expandtab
 
+" Custom tabs for yaml
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 sr et
+
 " Easier nerd tree
 map <leader>n :NERDTreeToggle<CR>
 
