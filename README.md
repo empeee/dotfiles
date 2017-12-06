@@ -16,7 +16,7 @@ setenv WORKENV 1
 ### Vim
 Before starting, make sure you create the `~/.vim/tmp/` directory for history and swap files
 ```
-$ mkdir ~/.vim/tmp
+$ mkdir -p ~/.vim/tmp
 ```
 
 We need to have Vundle installed, after that it will take care of other plugins
