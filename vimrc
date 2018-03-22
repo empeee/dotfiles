@@ -89,7 +89,7 @@ color default
 
 " Shortcut to better default colors for when all else fails
 "nmap <leader>m :color desert<CR>:AirlineTheme dark<CR>
-nmap <leader>m :set background=dark<CR>
+nmap <leader>m :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 ":AirlineTheme dark<CR>
 let python_highlight_all=1
 
