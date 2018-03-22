@@ -80,15 +80,16 @@ nmap <leader>bl :ls<CR>
 
 " Other Settings
 syntax on
-set background=dark
 
 " solarized8 and flattened_dark seem to work okay-ish in gitbash
 "color solarized8
-color flattened_dark
+"color flattened_dark
+color default
+"set background=dark
 
 " Shortcut to better default colors for when all else fails
 "nmap <leader>m :color desert<CR>:AirlineTheme dark<CR>
-nmap <leader>m :color solarized8<CR>
+nmap <leader>m :set background=dark<CR>
 ":AirlineTheme dark<CR>
 let python_highlight_all=1
 
