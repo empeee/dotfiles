@@ -36,7 +36,6 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'romainl/flattened'
 Plugin 'tmhedberg/SimpylFold'
-"Plugin 'nvie/vim-flake8'
 
 call vundle#end()
 filetype plugin indent on
@@ -81,20 +80,22 @@ nmap <leader>bl :ls<CR>
 " Other Settings
 syntax on
 
-" solarized8 and flattened_dark seem to work okay-ish in gitbash
-"color solarized8
-"color flattened_dark
 color default
-"set background=dark
+set background=light
 
 " Shortcut to better default colors for when all else fails
 "nmap <leader>m :color desert<CR>:AirlineTheme dark<CR>
 nmap <leader>m :let &background = ( &background == "dark"? "light" : "dark" )<CR>
-":AirlineTheme dark<CR>
 let python_highlight_all=1
 
 " Show line numbers
-set number
+set number relativenumber
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
 set encoding=utf-8
 
 " Fix tabs
