@@ -80,8 +80,8 @@ nmap <leader>bl :ls<CR>
 " Other Settings
 syntax on
 
-color default
-set background=light
+color solarized8
+set background=dark
 
 " Shortcut to better default colors for when all else fails
 "nmap <leader>m :color desert<CR>:AirlineTheme dark<CR>
