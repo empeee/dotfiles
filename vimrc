@@ -96,8 +96,8 @@ augroup numbertoggle
     autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
     autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
-set colorcolumn=80
-highlight ColorColumn ctermbg=233
+"set colorcolumn=80
+"highlight ColorColumn ctermbg=233
 
 set encoding=utf-8
 
