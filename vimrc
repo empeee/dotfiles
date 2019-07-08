@@ -81,7 +81,7 @@ nmap <leader>bl :ls<CR>
 set termguicolors
 syntax on
 
-color solarized8
+"color solarized8
 set background=dark
 
 " Shortcut to better default colors for when all else fails
