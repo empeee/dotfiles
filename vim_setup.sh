@@ -8,6 +8,8 @@ else
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
+vim -c "PluginInstall" -c "qa!"
+
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh
