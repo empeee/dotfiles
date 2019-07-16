@@ -36,6 +36,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'romainl/flattened'
 Plugin 'tmhedberg/SimpylFold'
+Plugin 'alvan/vim-closetag'
 
 call vundle#end()
 filetype plugin indent on
