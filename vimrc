@@ -140,3 +140,5 @@ nnoremap <CR> :nohlsearch<CR><CR>
 
 " Error Bells
 set noeb vb t_vb=
+
+set spell spelllang=en_us
