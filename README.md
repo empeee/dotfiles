@@ -14,6 +14,13 @@ setenv WORKENV 1
 ```
 
 ### Vim
+NOTE: A setup script has been added to automate this portion as well as the Terminal Fonts installation. To set up vim and terminal fonts run:
+```
+./vim_setup.sh
+```
+The description below is kept as an explanation of what this script does.
+
+
 Before starting, make sure you create the `~/.vim/tmp/` directory for history and swap files
 ```
 $ mkdir -p ~/.vim/tmp
