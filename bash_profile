@@ -25,3 +25,4 @@ fi
 export GIT_EDITOR=vim
 
 export EDITOR=vim
+export WORKENV=1
