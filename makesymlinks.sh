@@ -18,8 +18,17 @@ files_vim="vimrc "
 files_bash="bashrc bash_profile bash_prompt bash_aliases "
 files_csh="cshrc "
 
-# Cycle through arguments and add programs to file lists if included
-for item in "$@"
+# Generate program list from arguments, include all if no arguments
+if [ $# -eq 0 ]
+then
+    prog_list="tmux vim bash csh"
+else
+    prog_list=$@
+fi
+echo "Generating links for: $prog_list"
+
+# Cycle through program list and add programs to file lists if included
+for item in $prog_list
 do
 	case $item in
 		tmux)
