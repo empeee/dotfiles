@@ -5,14 +5,20 @@
 ############################
 
 ########## Variables
+# One liner to get the directory of the script - this is the source directory
 dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-olddir=~/.dotfiles_old             # old dotfiles backup directory
+olddir=~/.dotfiles_old             
+
+# File list starts empty
 files=""    # list of files/folders to symlink in homedir
+
+# Per-program list of files
 files_tmux="tmux.conf "
 files_vim="vimrc "
 files_bash="bashrc bash_profile bash_prompt bash_aliases "
 files_csh="cshrc "
 
+# Cycle through arguments and add programs to file lists if included
 for item in "$@"
 do
 	case $item in
@@ -27,8 +33,8 @@ do
 	esac
 done
 
-##########
 
+##########
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles"
 mkdir -p $olddir
