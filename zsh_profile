@@ -1,34 +1,28 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/.local/bin:$PATH";
 
-##export TERM="xterm-256color"
+#export TERM="xterm-256color"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{bash_prompt,bash_aliases}; do
+for file in ~/.{zsh_prompt,zsh_aliases}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
-# Append to the Bash history file, rather than overwriting it
-shopt -s histappend;
+autoload -Uz bashcompinit && bashcompinit
 
-# Autocorrect typos in path names when using `cd`
-shopt -s cdspell;
-
-## Set ls colors
-#if [ -f ~/.dircolors ]; then
-#    eval `dircolors -b ~/.dircolors`
-#fi
+# Set ls colors
+export CLICOLOR=1
+#export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 export GIT_EDITOR=vim
-
 export EDITOR=vim
 
 ## >>> conda initialize >>>
 ## !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/Users/mpude/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+#__conda_setup="$('/Users/mpude/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 #if [ $? -eq 0 ]; then
 #    eval "$__conda_setup"
 #else
