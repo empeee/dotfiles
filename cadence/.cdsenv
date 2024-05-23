@@ -1,0 +1,3 @@
+xpcell	disableProliferationMsg	boolean	t
+maestro.plotting showViVAGraphLaunchTip boolean nil
+ui      enableMenuShortcuts     boolean nil
