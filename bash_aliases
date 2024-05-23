@@ -5,10 +5,11 @@ alias lsa='ls -lah'
 
 alias git-graph='git log --all --decorate --oneline --graph'
 
-# Unraid
-alias cdapp='cd /mnt/user/appdata'
+alias cdwa='cd $VCADprojectWorkAreas'
+alias cdwaa='cd $CDS_WORKAREA'
+alias cicstart='bsub -I -q virtuoso virtuoso &'
 
-# Arch
-alias pacman-unused='pacman -Qtdq'
-alias pacman-remove-unused='sudo pacman -Rns $(pacman-unused)'
-alias pacman-user-installed='comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)'
+alias bklyna0='source /opt/si/users/mpude/repos/brooklyn_a0/proj_settings.sh;'
+alias bklyn='source /opt/si/users/mpude/repos/brooklyn_main/proj_settings.sh;'
+
+alias monaco='source /opt/si/users/mpude/repos/monaco_main/proj_settings.sh;'
