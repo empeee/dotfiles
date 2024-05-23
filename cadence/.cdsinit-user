@@ -1,0 +1,27 @@
+;; .cdsinit-user
+;;
+;; This is a cdsinit file for you to add any personal, custom
+;; startup instructions for Virtuoso in this VCAD style project. 
+;; This file will be loaded/run AFTER any PDK and 
+;; project-wide cdsinit commands, and AFTER the
+;; user's local .cdsinit-DM file, and so this can override 
+;; things set previously. Be Careful!
+
+
+;; If, and ONLY IF, usign a DM tool (SOS, IC Manage, VerSic, etc)
+;; then load DM-controlled file design_sandbox/.cdsinit-DM
+ilVCADprojectEnableDMtool = getShellEnvVar("VCADprojectEnableDMtool")
+
+when(boundp('ilVCADprojectEnableDMtool) && (ilVCADprojectEnableDMtool != nil)
+    ilcdsinitDMfile = "./design_sandbox/.cdsinit-DM"
+
+    if( isFile( strcat(ilcdsinitDMfile) ) then
+        load(ilcdsinitDMfile)
+    )
+)
+
+
+;; Add user-specific skill code below this line:
+
+load(".bindkeys.il")
+;;load("./design_sandbox/models/voltus/.cdsinit-voltus")
