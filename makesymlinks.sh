@@ -16,12 +16,11 @@ files=""    # list of files/folders to symlink in homedir
 files_tmux="tmux.conf "
 files_vim="vimrc "
 files_bash="bashrc bash_profile bash_prompt bash_aliases "
-files_csh="cshrc "
 
 # Generate program list from arguments, include all if no arguments
 if [ $# -eq 0 ]
 then
-    prog_list="tmux vim bash csh"
+    prog_list="tmux vim bash"
 else
     prog_list=$@
 fi
